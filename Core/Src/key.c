@@ -13,11 +13,12 @@ static uint8_t key3_state = 0;
 */
 void Init_Key_GPIO(void)
 {
-	//使能时钟
+    // Enable GPIO and EXTI source selection clocks.
     rcu_periph_clock_enable(RCU_GPIOB);
+	rcu_periph_clock_enable(RCU_CFGCMP);
 	
-	//设置输出模式，上拉
-    gpio_mode_set(GPIOB, GPIO_MODE_INPUT, GPIO_PUPD_PULLUP, GPIO_PIN_3|GPIO_PIN_9|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15);
+	//设置输入模式，上拉
+    gpio_mode_set(GPIOB, GPIO_MODE_INPUT, GPIO_PUPD_PULLUP, GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15);
 
     //中断线使能
     nvic_irq_enable(EXTI4_15_IRQn,3U);
@@ -39,30 +40,33 @@ void Init_Key_GPIO(void)
 }
 
 /*
-*   函数内容：初始化EC11 GPIO
-*   函数参数：无
-*   返回值：  无
+*   函数内容：初始化波轮开关GPIO
+*   PB3: 左，PB9: 右，PB4: 按下；所有开关按下时接地
 */
-void Init_EC11_GPIO(void)
+void Init_Wheel_Switch_GPIO(void)
 {
-	//使能时钟GPIOB，CMP
+    //使能时钟GPIOB，CMP
     rcu_periph_clock_enable(RCU_GPIOB);
 	rcu_periph_clock_enable(RCU_CFGCMP);
 	
-	//设置引脚模式，上拉
-	gpio_mode_set(GPIOB,GPIO_MODE_INPUT,GPIO_PUPD_PULLUP,GPIO_PIN_4);
+	//设置输入模式，内部上拉
+	gpio_mode_set(GPIOB, GPIO_MODE_INPUT, GPIO_PUPD_PULLUP, GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_9);
 	
 	//中断线使能
+	nvic_irq_enable(EXTI2_3_IRQn, 3U);
 	nvic_irq_enable(EXTI4_15_IRQn,3U);
 	
-	//配置中断线
-	syscfg_exti_line_config(EXTI_SOURCE_GPIOB,EXTI_SOURCE_PIN4);
+	//配置左右开关的中断线；按下按键由显示循环轮询，以支持暂停显示。
+	syscfg_exti_line_config(EXTI_SOURCE_GPIOB, EXTI_SOURCE_PIN3);
+	syscfg_exti_line_config(EXTI_SOURCE_GPIOB, EXTI_SOURCE_PIN9);
 	
-	//初始化中断线，设置为中断模式，上升沿下降沿触发
-	exti_init(EXTI_4,EXTI_INTERRUPT,EXTI_TRIG_BOTH);
+	//初始化中断线，设置为中断模式，下降沿触发
+	exti_init(EXTI_3, EXTI_INTERRUPT, EXTI_TRIG_FALLING);
+	exti_init(EXTI_9, EXTI_INTERRUPT, EXTI_TRIG_FALLING);
 	
 	//中断标志位清除
-	exti_interrupt_flag_clear(EXTI_4);
+	exti_interrupt_flag_clear(EXTI_3);
+	exti_interrupt_flag_clear(EXTI_9);
 }
 
 /*
@@ -169,12 +173,12 @@ void Key_Handle(volatile struct Oscilloscope *value)
 
 void KEYD_SCAN(volatile struct Oscilloscope *value)
 {
-	if(gpio_input_bit_get(GPIOB,GPIO_PIN_9)==RESET)
+	if(gpio_input_bit_get(GPIOB,GPIO_PIN_4)==RESET)
 	{
 		delay_1ms(20);
-		if(gpio_input_bit_get(GPIOB,GPIO_PIN_9)==RESET)
+		if(gpio_input_bit_get(GPIOB,GPIO_PIN_4)==RESET)
 		{
-			while(gpio_input_bit_get(GPIOB,GPIO_PIN_9)==RESET);
+			while(gpio_input_bit_get(GPIOB,GPIO_PIN_4)==RESET);
 			(*value).keyValue = KEYDPRESS;
 		}
 	}
@@ -218,35 +222,29 @@ void Key_Sacnf(volatile struct Oscilloscope *value)
 
 extern volatile struct Oscilloscope oscilloscope;
 
+void EXTI2_3_IRQHandler(void)
+{
+    if(RESET != exti_interrupt_flag_get(EXTI_3))
+    {
+        exti_interrupt_flag_clear(EXTI_3);
+        delay_1ms(20);
+        if(gpio_input_bit_get(GPIOB, GPIO_PIN_3) == RESET)
+        {
+            oscilloscope.keyValue = KEYAPRESS;
+        }
+    }
+}
 
 void EXTI4_15_IRQHandler(void)
 {
-    static uint8_t A_cnt=0;
-    static uint8_t B_value=0;
-    if(RESET != exti_interrupt_flag_get(EXTI_4)) 
+    if(RESET != exti_interrupt_flag_get(EXTI_9))
     {
-				if((gpio_input_bit_get(GPIOB,GPIO_PIN_4) == RESET) && (A_cnt == 0))	//A相下降沿触发一次
-				{
-					A_cnt++;			//计数值加一，表示已经触发了第一次中断
-					B_value = 0;	//读取B相电平，若为高电平则B_level置1，反之保持0
-					if(gpio_input_bit_get(GPIOB,GPIO_PIN_3) == SET)
-					{
-						B_value = 1;
-					}
-				}
-				else if((gpio_input_bit_get(GPIOB,GPIO_PIN_4) == SET) && (A_cnt == 1))	//A相上升沿触发一次
-				{
-					A_cnt = 0;
-					if((B_value == 1) && (gpio_input_bit_get(GPIOB,GPIO_PIN_3) == RESET))
-					{
-						oscilloscope.keyValue=KEYBPRESS; 
-					}
-					if((B_value == 0) && (gpio_input_bit_get(GPIOB,GPIO_PIN_3) == SET))
-					{
-						oscilloscope.keyValue=KEYAPRESS;
-					}
-				}
-        exti_interrupt_flag_clear(EXTI_4);
+        exti_interrupt_flag_clear(EXTI_9);
+        delay_1ms(20);
+        if(gpio_input_bit_get(GPIOB, GPIO_PIN_9) == RESET)
+        {
+            oscilloscope.keyValue = KEYBPRESS;
+        }
     }
     if(RESET != exti_interrupt_flag_get(EXTI_13))
     {

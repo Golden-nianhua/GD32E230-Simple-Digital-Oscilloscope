@@ -220,11 +220,23 @@ void TFT_WR_REG16(uint16_t reg)
 void TFT_Address_Set(uint16_t x1,uint16_t y1,uint16_t x2,uint16_t y2)
 {
 		TFT_WR_REG(0x2a);//列地址设置
-		TFT_WR_DATA(x1+1);
-		TFT_WR_DATA(x2+1);
+		if(USE_HORIZONTAL == 2){
+			TFT_WR_DATA(x1+1);
+			TFT_WR_DATA(x2+1);
+		}
+		else{
+			TFT_WR_DATA(x1);
+			TFT_WR_DATA(x2);
+		}
 		TFT_WR_REG(0x2b);//行地址设置
-		TFT_WR_DATA(y1+2);
-		TFT_WR_DATA(y2+2);
+		if(USE_HORIZONTAL == 2){
+			TFT_WR_DATA(y1+2);
+			TFT_WR_DATA(y2+2);
+		}
+		else{
+			TFT_WR_DATA(y1);
+			TFT_WR_DATA(y2);
+		}
 		TFT_WR_REG(0x2c);//储存器写
 }
 
@@ -236,11 +248,23 @@ void TFT_Address_Set(uint16_t x1,uint16_t y1,uint16_t x2,uint16_t y2)
 void TFT_Address_Set16(uint16_t x1,uint16_t y1,uint16_t x2,uint16_t y2)
 {
 		TFT_WR_REG16(0x2a);//列地址设置
-		TFT_WR_DATA16(x1+1);
-		TFT_WR_DATA16(x2+1);
+		if(USE_HORIZONTAL == 2){
+			TFT_WR_DATA16(x1+1);
+			TFT_WR_DATA16(x2+1);
+		}
+		else{
+			TFT_WR_DATA16(x1);
+			TFT_WR_DATA16(x2);
+		}
 		TFT_WR_REG16(0x2b);//行地址设置
-		TFT_WR_DATA16(y1+2);
-		TFT_WR_DATA16(y2+2);
+		if(USE_HORIZONTAL == 2){
+			TFT_WR_DATA16(y1+2);
+			TFT_WR_DATA16(y2+2);
+		}
+		else{
+			TFT_WR_DATA16(y1);
+			TFT_WR_DATA16(y2);
+		}
 		TFT_WR_REG16(0x2c);//储存器写 
 }
 

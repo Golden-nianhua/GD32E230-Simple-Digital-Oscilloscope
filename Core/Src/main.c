@@ -71,8 +71,8 @@ int main(void)
     //初始化PWM输出
     Init_PWM_Output(oscilloscope.timerPeriod-1,oscilloscope.pwmOut);
     
-    //初始化EC11引脚
-    Init_EC11_GPIO();
+    //初始化波轮开关引脚
+    Init_Wheel_Switch_GPIO();
     
     //初始化按键引脚
     Init_Key_GPIO();

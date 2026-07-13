@@ -19,6 +19,6 @@ void Init_Key_GPIO(void);
 void Key_Sacnf(volatile struct Oscilloscope *value);
 void KEYD_SCAN(volatile struct Oscilloscope *value);
 void Key_Handle(volatile struct Oscilloscope *value);
-void Init_EC11_GPIO(void);
+void Init_Wheel_Switch_GPIO(void);
 
 #endif
