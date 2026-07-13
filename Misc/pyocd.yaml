@@ -1,0 +1,4 @@
+target_override: gd32e230c8
+pack: Misc/GigaDevice.GD32E23x_DFP.2.5.0.pack
+frequency: 10000000
+connect_mode: under-reset

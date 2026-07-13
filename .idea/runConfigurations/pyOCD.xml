@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="pyOCD 下载" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="tool run pyocd load --connect=under-reset --config &quot;Misc\pyocd.yaml&quot; &quot;$CMakeCurrentProductFile$&quot;" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$ProjectFileDir$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GD32E230_SPL_Template" TARGET_NAME="GD32E230_SPL_Template" CONFIG_NAME="Debug" RUN_PATH="D:\Code\uv\uv.exe">
+    <method v="2">
+      <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+    </method>
+  </configuration>
+</component>

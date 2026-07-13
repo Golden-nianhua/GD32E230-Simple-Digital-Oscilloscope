@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="GD32E230_SPL_Template" targetName="gd32e23x_spl" />
+      <config projectName="GD32E230_SPL_Template" targetName="GD32E230_SPL_Template" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" FROM_PRESET="true" GENERATION_DIR="$PROJECT_DIR$/build/Debug" />
+      <configuration PROFILE_NAME="Release" ENABLED="true" FROM_PRESET="true" GENERATION_DIR="$PROJECT_DIR$/build/Release" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d798be5d-7c2e-4c26-b551-5c1f4fd3a328" name="更改" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="EmbeddedSvdWindowState">
+    <option name="columnWidths">
+      <list>
+        <option value="235" />
+        <option value="92" />
+        <option value="0" />
+      </list>
+    </option>
+    <option name="columnOrder">
+      <list>
+        <option value="名称" />
+        <option value="值" />
+        <option value="描述" />
+      </list>
+    </option>
+    <option name="loadedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Misc/SVD/GD32E23x.svd" />
+      </list>
+    </option>
+    <option name="nodes">
+      <map>
+        <entry key="GD32E23x.svd" value="-E" />
+        <entry key="GD32E23x.svd|g:GPIO" value="-E" />
+        <entry key="GD32E23x.svd|g:I2C" value="-E" />
+        <entry key="GD32E23x.svd|g:TIMER" value="-E" />
+        <entry key="GD32E23x.svd|g:USART" value="-E" />
+        <entry key="GD32E23x.svd|p:ADC" value="-E" />
+        <entry key="GD32E23x.svd|p:ADC|CTL0" value="HC" />
+        <entry key="GD32E23x.svd|p:ADC|CTL1" value="HC" />
+        <entry key="GD32E23x.svd|p:ADC|IDATA0" value="HC" />
+        <entry key="GD32E23x.svd|p:ADC|IDATA1" value="HC" />
+        <entry key="GD32E23x.svd|p:ADC|IDATA2" value="HC" />
+        <entry key="GD32E23x.svd|p:ADC|IDATA3" value="HC" />
+        <entry key="GD32E23x.svd|p:ADC|IOFF0" value="HC" />
+        <entry key="GD32E23x.svd|p:ADC|IOFF1" value="HC" />
+        <entry key="GD32E23x.svd|p:ADC|IOFF2" value="HC" />
+        <entry key="GD32E23x.svd|p:ADC|IOFF3" value="HC" />
+        <entry key="GD32E23x.svd|p:ADC|ISQ" value="HC" />
+        <entry key="GD32E23x.svd|p:ADC|OVSAMPCTL" value="HC" />
+        <entry key="GD32E23x.svd|p:ADC|RDATA" value="HC" />
+        <entry key="GD32E23x.svd|p:ADC|RSQ0" value="HC" />
+        <entry key="GD32E23x.svd|p:ADC|RSQ1" value="HC" />
+        <entry key="GD32E23x.svd|p:ADC|RSQ2" value="HC" />
+        <entry key="GD32E23x.svd|p:ADC|SAMPT0" value="HC" />
+        <entry key="GD32E23x.svd|p:ADC|SAMPT1" value="HC" />
+        <entry key="GD32E23x.svd|p:ADC|STAT" value="HC" />
+        <entry key="GD32E23x.svd|p:ADC|WDHT" value="HC" />
+        <entry key="GD32E23x.svd|p:ADC|WDLT" value="HC" />
+        <entry key="GD32E23x.svd|p:CMP" value="-E" />
+        <entry key="GD32E23x.svd|p:CMP|CS" value="HC" />
+        <entry key="GD32E23x.svd|p:CRC" value="-E" />
+        <entry key="GD32E23x.svd|p:CRC|CTL" value="HC" />
+        <entry key="GD32E23x.svd|p:CRC|DATA" value="HC" />
+        <entry key="GD32E23x.svd|p:CRC|FDATA" value="HC" />
+        <entry key="GD32E23x.svd|p:CRC|IDATA" value="HC" />
+        <entry key="GD32E23x.svd|p:CRC|POLY" value="HC" />
+        <entry key="GD32E23x.svd|p:DBGMCU" value="-E" />
+        <entry key="GD32E23x.svd|p:DBGMCU|CTL0" value="HC" />
+        <entry key="GD32E23x.svd|p:DBGMCU|CTL1" value="HC" />
+        <entry key="GD32E23x.svd|p:DBGMCU|ID" value="HC" />
+        <entry key="GD32E23x.svd|p:DMA" value="-E" />
+        <entry key="GD32E23x.svd|p:DMA|CH0CNT" value="HC" />
+        <entry key="GD32E23x.svd|p:DMA|CH0CTL" value="HC" />
+        <entry key="GD32E23x.svd|p:DMA|CH0MADDR" value="HC" />
+        <entry key="GD32E23x.svd|p:DMA|CH0PADDR" value="HC" />
+        <entry key="GD32E23x.svd|p:DMA|CH1CNT" value="HC" />
+        <entry key="GD32E23x.svd|p:DMA|CH1CTL" value="HC" />
+        <entry key="GD32E23x.svd|p:DMA|CH1MADDR" value="HC" />
+        <entry key="GD32E23x.svd|p:DMA|CH1PADDR" value="HC" />
+        <entry key="GD32E23x.svd|p:DMA|CH2CNT" value="HC" />
+        <entry key="GD32E23x.svd|p:DMA|CH2CTL" value="HC" />
+        <entry key="GD32E23x.svd|p:DMA|CH2MADDR" value="HC" />
+        <entry key="GD32E23x.svd|p:DMA|CH2PADDR" value="HC" />
+        <entry key="GD32E23x.svd|p:DMA|CH3CNT" value="HC" />
+        <entry key="GD32E23x.svd|p:DMA|CH3CTL" value="HC" />
+        <entry key="GD32E23x.svd|p:DMA|CH3MADDR" value="HC" />
+        <entry key="GD32E23x.svd|p:DMA|CH3PADDR" value="HC" />
+        <entry key="GD32E23x.svd|p:DMA|CH4CNT" value="HC" />
+        <entry key="GD32E23x.svd|p:DMA|CH4CTL" value="HC" />
+        <entry key="GD32E23x.svd|p:DMA|CH4MADDR" value="HC" />
+        <entry key="GD32E23x.svd|p:DMA|CH4PADDR" value="HC" />
+        <entry key="GD32E23x.svd|p:DMA|INTC" value="HC" />
+        <entry key="GD32E23x.svd|p:DMA|INTF" value="HC" />
+        <entry key="GD32E23x.svd|p:EXTI" value="-E" />
+        <entry key="GD32E23x.svd|p:EXTI|EVEN" value="HC" />
+        <entry key="GD32E23x.svd|p:EXTI|FTEN" value="HC" />
+        <entry key="GD32E23x.svd|p:EXTI|INTEN" value="HC" />
+        <entry key="GD32E23x.svd|p:EXTI|PD" value="HC" />
+        <entry key="GD32E23x.svd|p:EXTI|RTEN" value="HC" />
+        <entry key="GD32E23x.svd|p:EXTI|SWIEV" value="HC" />
+        <entry key="GD32E23x.svd|p:FMC" value="-E" />
+        <entry key="GD32E23x.svd|p:FMC|ADDR" value="HC" />
+        <entry key="GD32E23x.svd|p:FMC|CTL" value="HC" />
+        <entry key="GD32E23x.svd|p:FMC|KEY" value="HC" />
+        <entry key="GD32E23x.svd|p:FMC|OBKEY" value="HC" />
+        <entry key="GD32E23x.svd|p:FMC|OBSTAT" value="HC" />
+        <entry key="GD32E23x.svd|p:FMC|PID" value="HC" />
+        <entry key="GD32E23x.svd|p:FMC|STAT" value="HC" />
+        <entry key="GD32E23x.svd|p:FMC|WP" value="HC" />
+        <entry key="GD32E23x.svd|p:FMC|WS" value="HC" />
+        <entry key="GD32E23x.svd|p:FWDGT" value="-E" />
+        <entry key="GD32E23x.svd|p:FWDGT|CTL" value="HC" />
+        <entry key="GD32E23x.svd|p:FWDGT|PSC" value="HC" />
+        <entry key="GD32E23x.svd|p:FWDGT|RLD" value="HC" />
+        <entry key="GD32E23x.svd|p:FWDGT|STAT" value="HC" />
+        <entry key="GD32E23x.svd|p:FWDGT|WND" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOA" value="-E" />
+        <entry key="GD32E23x.svd|p:GPIOA|AFSEL0" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOA|AFSEL1" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOA|BC" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOA|BOP" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOA|CTL" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOA|ISTAT" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOA|LOCK" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOA|OCTL" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOA|OMODE" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOA|OSPD" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOA|PUD" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOA|TG" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOB" value="-E" />
+        <entry key="GD32E23x.svd|p:GPIOB|AFSEL0" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOB|AFSEL1" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOB|BC" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOB|BOP" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOB|CTL" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOB|ISTAT" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOB|LOCK" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOB|OCTL" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOB|OMODE" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOB|OSPD" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOB|PUD" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOB|TG" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOC" value="-E" />
+        <entry key="GD32E23x.svd|p:GPIOC|BC" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOC|BOP" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOC|CTL" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOC|ISTAT" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOC|OCTL" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOC|OMODE" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOC|OSPD" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOC|PUD" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOC|TG" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOF" value="-E" />
+        <entry key="GD32E23x.svd|p:GPIOF|AFSEL0" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOF|AFSEL1" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOF|BC" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOF|BOP" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOF|CTL" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOF|ISTAT" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOF|OCTL" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOF|OMODE" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOF|OSPD" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOF|PUD" value="HC" />
+        <entry key="GD32E23x.svd|p:GPIOF|TG" value="HC" />
+        <entry key="GD32E23x.svd|p:I2C0" value="-E" />
+        <entry key="GD32E23x.svd|p:I2C0|CKCFG" value="HC" />
+        <entry key="GD32E23x.svd|p:I2C0|CTL0" value="HC" />
+        <entry key="GD32E23x.svd|p:I2C0|CTL1" value="HC" />
+        <entry key="GD32E23x.svd|p:I2C0|DATA" value="HC" />
+        <entry key="GD32E23x.svd|p:I2C0|FMPCFG" value="HC" />
+        <entry key="GD32E23x.svd|p:I2C0|RT" value="HC" />
+        <entry key="GD32E23x.svd|p:I2C0|SADDR0" value="HC" />
+        <entry key="GD32E23x.svd|p:I2C0|SADDR1" value="HC" />
+        <entry key="GD32E23x.svd|p:I2C0|SAMCS" value="HC" />
+        <entry key="GD32E23x.svd|p:I2C0|STAT0" value="HC" />
+        <entry key="GD32E23x.svd|p:I2C0|STAT1" value="HC" />
+        <entry key="GD32E23x.svd|p:I2C1" value="-E" />
+        <entry key="GD32E23x.svd|p:I2C1|CKCFG" value="HC" />
+        <entry key="GD32E23x.svd|p:I2C1|CTL0" value="HC" />
+        <entry key="GD32E23x.svd|p:I2C1|CTL1" value="HC" />
+        <entry key="GD32E23x.svd|p:I2C1|DATA" value="HC" />
+        <entry key="GD32E23x.svd|p:I2C1|FMPCFG" value="HC" />
+        <entry key="GD32E23x.svd|p:I2C1|RT" value="HC" />
+        <entry key="GD32E23x.svd|p:I2C1|SADDR0" value="HC" />
+        <entry key="GD32E23x.svd|p:I2C1|SADDR1" value="HC" />
+        <entry key="GD32E23x.svd|p:I2C1|SAMCS" value="HC" />
+        <entry key="GD32E23x.svd|p:I2C1|STAT0" value="HC" />
+        <entry key="GD32E23x.svd|p:I2C1|STAT1" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC" value="-E" />
+        <entry key="GD32E23x.svd|p:NVIC|IABR0" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IABR1" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IABR10" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IABR11" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IABR12" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IABR13" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IABR14" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IABR15" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IABR2" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IABR3" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IABR4" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IABR5" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IABR6" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IABR7" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IABR8" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IABR9" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICER0" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICER1" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICER10" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICER11" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICER12" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICER13" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICER14" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICER15" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICER2" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICER3" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICER4" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICER5" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICER6" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICER7" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICER8" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICER9" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICPR0" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICPR1" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICPR10" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICPR11" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICPR12" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICPR13" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICPR14" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICPR15" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICPR2" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICPR3" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICPR4" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICPR5" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICPR6" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICPR7" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICPR8" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ICPR9" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR0" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR1" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR10" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR11" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR12" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR13" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR14" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR15" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR16" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR17" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR18" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR19" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR2" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR20" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR21" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR22" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR23" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR24" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR25" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR26" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR27" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR28" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR29" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR3" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR30" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR31" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR4" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR5" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR6" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR7" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR8" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|IPR9" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISER0" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISER1" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISER10" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISER11" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISER12" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISER13" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISER14" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISER15" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISER2" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISER3" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISER4" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISER5" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISER6" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISER7" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISER8" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISER9" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISPR0" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISPR1" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISPR10" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISPR11" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISPR12" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISPR13" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISPR14" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISPR15" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISPR2" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISPR3" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISPR4" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISPR5" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISPR6" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISPR7" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISPR8" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ISPR9" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ITNS0" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ITNS1" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ITNS10" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ITNS11" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ITNS12" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ITNS13" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ITNS14" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ITNS15" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ITNS2" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ITNS3" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ITNS4" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ITNS5" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ITNS6" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ITNS7" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ITNS8" value="HC" />
+        <entry key="GD32E23x.svd|p:NVIC|ITNS9" value="HC" />
+        <entry key="GD32E23x.svd|p:PMU" value="-E" />
+        <entry key="GD32E23x.svd|p:PMU|CS" value="HC" />
+        <entry key="GD32E23x.svd|p:PMU|CTL" value="HC" />
+        <entry key="GD32E23x.svd|p:RCU" value="-E" />
+        <entry key="GD32E23x.svd|p:RCU|AHBEN" value="HC" />
+        <entry key="GD32E23x.svd|p:RCU|AHBRST" value="HC" />
+        <entry key="GD32E23x.svd|p:RCU|APB1EN" value="HC" />
+        <entry key="GD32E23x.svd|p:RCU|APB1RST" value="HC" />
+        <entry key="GD32E23x.svd|p:RCU|APB2EN" value="HC" />
+        <entry key="GD32E23x.svd|p:RCU|APB2RST" value="HC" />
+        <entry key="GD32E23x.svd|p:RCU|BDCTL" value="HC" />
+        <entry key="GD32E23x.svd|p:RCU|CFG0" value="HC" />
+        <entry key="GD32E23x.svd|p:RCU|CFG1" value="HC" />
+        <entry key="GD32E23x.svd|p:RCU|CFG2" value="HC" />
+        <entry key="GD32E23x.svd|p:RCU|CTL0" value="HC" />
+        <entry key="GD32E23x.svd|p:RCU|CTL1" value="HC" />
+        <entry key="GD32E23x.svd|p:RCU|DSV" value="HC" />
+        <entry key="GD32E23x.svd|p:RCU|INT" value="HC" />
+        <entry key="GD32E23x.svd|p:RCU|RSTSCK" value="HC" />
+        <entry key="GD32E23x.svd|p:RCU|VKEY" value="HC" />
+        <entry key="GD32E23x.svd|p:RTC" value="-E" />
+        <entry key="GD32E23x.svd|p:RTC|ALRM0SS" value="HC" />
+        <entry key="GD32E23x.svd|p:RTC|ALRM0TD" value="HC" />
+        <entry key="GD32E23x.svd|p:RTC|BKP0" value="HC" />
+        <entry key="GD32E23x.svd|p:RTC|BKP1" value="HC" />
+        <entry key="GD32E23x.svd|p:RTC|BKP2" value="HC" />
+        <entry key="GD32E23x.svd|p:RTC|BKP3" value="HC" />
+        <entry key="GD32E23x.svd|p:RTC|BKP4" value="HC" />
+        <entry key="GD32E23x.svd|p:RTC|CTL" value="HC" />
+        <entry key="GD32E23x.svd|p:RTC|DATE" value="HC" />
+        <entry key="GD32E23x.svd|p:RTC|DTS" value="HC" />
+        <entry key="GD32E23x.svd|p:RTC|HRFC" value="HC" />
+        <entry key="GD32E23x.svd|p:RTC|PSC" value="HC" />
+        <entry key="GD32E23x.svd|p:RTC|SHIFTCTL" value="HC" />
+        <entry key="GD32E23x.svd|p:RTC|SS" value="HC" />
+        <entry key="GD32E23x.svd|p:RTC|SSTS" value="HC" />
+        <entry key="GD32E23x.svd|p:RTC|STAT" value="HC" />
+        <entry key="GD32E23x.svd|p:RTC|TAMP" value="HC" />
+        <entry key="GD32E23x.svd|p:RTC|TIME" value="HC" />
+        <entry key="GD32E23x.svd|p:RTC|TTS" value="HC" />
+        <entry key="GD32E23x.svd|p:RTC|WPK" value="HC" />
+        <entry key="GD32E23x.svd|p:SPI0" value="-E" />
+        <entry key="GD32E23x.svd|p:SPI0|CPCPOLY" value="HC" />
+        <entry key="GD32E23x.svd|p:SPI0|CTL0" value="HC" />
+        <entry key="GD32E23x.svd|p:SPI0|CTL1" value="HC" />
+        <entry key="GD32E23x.svd|p:SPI0|DATA" value="HC" />
+        <entry key="GD32E23x.svd|p:SPI0|I2SCTL" value="HC" />
+        <entry key="GD32E23x.svd|p:SPI0|I2SPSC" value="HC" />
+        <entry key="GD32E23x.svd|p:SPI0|RCRC" value="HC" />
+        <entry key="GD32E23x.svd|p:SPI0|STAT" value="HC" />
+        <entry key="GD32E23x.svd|p:SPI0|TCRC" value="HC" />
+        <entry key="GD32E23x.svd|p:SPI1" value="-E" />
+        <entry key="GD32E23x.svd|p:SPI1|CPCPOLY" value="HC" />
+        <entry key="GD32E23x.svd|p:SPI1|CTL0" value="HC" />
+        <entry key="GD32E23x.svd|p:SPI1|CTL1" value="HC" />
+        <entry key="GD32E23x.svd|p:SPI1|DATA" value="HC" />
+        <entry key="GD32E23x.svd|p:SPI1|I2SCTL" value="HC" />
+        <entry key="GD32E23x.svd|p:SPI1|I2SPSC" value="HC" />
+        <entry key="GD32E23x.svd|p:SPI1|QCTL" value="HC" />
+        <entry key="GD32E23x.svd|p:SPI1|RCRC" value="HC" />
+        <entry key="GD32E23x.svd|p:SPI1|STAT" value="HC" />
+        <entry key="GD32E23x.svd|p:SPI1|TCRC" value="HC" />
+        <entry key="GD32E23x.svd|p:SYSCFG" value="-E" />
+        <entry key="GD32E23x.svd|p:SYSCFG|CFG0" value="HC" />
+        <entry key="GD32E23x.svd|p:SYSCFG|CFG2" value="HC" />
+        <entry key="GD32E23x.svd|p:SYSCFG|CPU_IRQ_LAT" value="HC" />
+        <entry key="GD32E23x.svd|p:SYSCFG|EXTISS0" value="HC" />
+        <entry key="GD32E23x.svd|p:SYSCFG|EXTISS1" value="HC" />
+        <entry key="GD32E23x.svd|p:SYSCFG|EXTISS2" value="HC" />
+        <entry key="GD32E23x.svd|p:SYSCFG|EXTISS3" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER0" value="-E" />
+        <entry key="GD32E23x.svd|p:TIMER0|CAR" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER0|CCHP" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER0|CFG" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER0|CH0CV" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER0|CH1CV" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER0|CH2CV" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER0|CH3CV" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER0|CHCTL0_Input" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER0|CHCTL0_Output" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER0|CHCTL1_Input" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER0|CHCTL1_Output" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER0|CHCTL2" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER0|CNT" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER0|CREP" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER0|CTL0" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER0|CTL1" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER0|DMACFG" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER0|DMAINTEN" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER0|DMATB" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER0|INTF" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER0|PSC" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER0|SMCFG" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER0|SWEVG" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER13" value="-E" />
+        <entry key="GD32E23x.svd|p:TIMER13|CAR" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER13|CFG" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER13|CH0CV" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER13|CHCTL0_Input" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER13|CHCTL0_Output" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER13|CHCTL2" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER13|CNT" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER13|CTL0" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER13|DMAINTEN" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER13|INTF" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER13|IRMP" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER13|PSC" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER13|SWEVG" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER14" value="-E" />
+        <entry key="GD32E23x.svd|p:TIMER14|CAR" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER14|CCHP" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER14|CFG" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER14|CH0CV" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER14|CH1CV" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER14|CHCTL0_Input" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER14|CHCTL0_Output" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER14|CHCTL2" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER14|CNT" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER14|CREP" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER14|CTL0" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER14|CTL1" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER14|DMACFG" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER14|DMAINTEN" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER14|DMATB" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER14|INTF" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER14|PSC" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER14|SMCFG" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER14|SWEVG" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER15" value="-E" />
+        <entry key="GD32E23x.svd|p:TIMER15|CAR" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER15|CCHP" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER15|CFG" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER15|CH0CV" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER15|CHCTL0_Input" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER15|CHCTL0_Output" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER15|CHCTL2" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER15|CNT" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER15|CREP" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER15|CTL0" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER15|CTL1" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER15|DMACFG" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER15|DMAINTEN" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER15|DMATB" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER15|INTF" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER15|PSC" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER15|SWEVG" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER16" value="-E" />
+        <entry key="GD32E23x.svd|p:TIMER16|CAR" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER16|CCHP" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER16|CFG" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER16|CH0CV" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER16|CHCTL0_Input" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER16|CHCTL0_Output" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER16|CHCTL2" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER16|CNT" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER16|CREP" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER16|CTL0" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER16|CTL1" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER16|DMACFG" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER16|DMAINTEN" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER16|DMATB" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER16|INTF" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER16|PSC" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER16|SWEVG" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER2" value="-E" />
+        <entry key="GD32E23x.svd|p:TIMER2|CAR" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER2|CFG" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER2|CH0CV" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER2|CH1CV" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER2|CH2CV" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER2|CH3CV" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER2|CHCTL0_Input" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER2|CHCTL0_Output" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER2|CHCTL1_Input" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER2|CHCTL1_Output" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER2|CHCTL2" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER2|CNT" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER2|CTL0" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER2|CTL1" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER2|DMACFG" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER2|DMAINTEN" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER2|DMATB" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER2|INTF" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER2|PSC" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER2|SMCFG" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER2|SWEVG" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER5" value="-E" />
+        <entry key="GD32E23x.svd|p:TIMER5|CAR" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER5|CNT" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER5|CTL0" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER5|CTL1" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER5|DMAINTEN" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER5|INTF" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER5|PSC" value="HC" />
+        <entry key="GD32E23x.svd|p:TIMER5|SWEVG" value="HC" />
+        <entry key="GD32E23x.svd|p:USART0" value="-E" />
+        <entry key="GD32E23x.svd|p:USART0|BAUD" value="HC" />
+        <entry key="GD32E23x.svd|p:USART0|CHC" value="HC" />
+        <entry key="GD32E23x.svd|p:USART0|CMD" value="HC" />
+        <entry key="GD32E23x.svd|p:USART0|CTL0" value="HC" />
+        <entry key="GD32E23x.svd|p:USART0|CTL1" value="HC" />
+        <entry key="GD32E23x.svd|p:USART0|CTL2" value="HC" />
+        <entry key="GD32E23x.svd|p:USART0|GP" value="HC" />
+        <entry key="GD32E23x.svd|p:USART0|INTC" value="HC" />
+        <entry key="GD32E23x.svd|p:USART0|RDATA" value="HC" />
+        <entry key="GD32E23x.svd|p:USART0|RFCS" value="HC" />
+        <entry key="GD32E23x.svd|p:USART0|RT" value="HC" />
+        <entry key="GD32E23x.svd|p:USART0|STAT" value="HC" />
+        <entry key="GD32E23x.svd|p:USART0|TDATA" value="HC" />
+        <entry key="GD32E23x.svd|p:USART1" value="-E" />
+        <entry key="GD32E23x.svd|p:USART1|BAUD" value="HC" />
+        <entry key="GD32E23x.svd|p:USART1|CHC" value="HC" />
+        <entry key="GD32E23x.svd|p:USART1|CMD" value="HC" />
+        <entry key="GD32E23x.svd|p:USART1|CTL0" value="HC" />
+        <entry key="GD32E23x.svd|p:USART1|CTL1" value="HC" />
+        <entry key="GD32E23x.svd|p:USART1|CTL2" value="HC" />
+        <entry key="GD32E23x.svd|p:USART1|GP" value="HC" />
+        <entry key="GD32E23x.svd|p:USART1|INTC" value="HC" />
+        <entry key="GD32E23x.svd|p:USART1|RDATA" value="HC" />
+        <entry key="GD32E23x.svd|p:USART1|RFCS" value="HC" />
+        <entry key="GD32E23x.svd|p:USART1|RT" value="HC" />
+        <entry key="GD32E23x.svd|p:USART1|STAT" value="HC" />
+        <entry key="GD32E23x.svd|p:USART1|TDATA" value="HC" />
+        <entry key="GD32E23x.svd|p:WWDGT" value="-E" />
+        <entry key="GD32E23x.svd|p:WWDGT|CFG" value="HC" />
+        <entry key="GD32E23x.svd|p:WWDGT|CTL" value="HC" />
+        <entry key="GD32E23x.svd|p:WWDGT|STAT" value="HC" />
+      </map>
+    </option>
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="e9TnKVVL" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2026" />
+    <option name="minorVersion" value="1" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3GPbhTzEkMLUm5y8fNvPBOtAslX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "CMake 应用程序.pyOCD 下载.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.first.attach.projects": "true",
+    "settings.editor.selected.configurable": "com.jetbrains.cidr.cpp.execution.gdbserver.debugtargets.NamedDebugTargetConfigurable",
+    "vue.rearranger.settings.migration": "true",
+    "嵌入式 GDB 服务器.pyOCD调试.executor": "Debug"
+  }
+}]]></component>
+  <component name="RunManager" selected="CMake 应用程序.pyOCD 下载">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gd32e23x_spl" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GD32E230_SPL_Template" TARGET_NAME="gd32e23x_spl" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake 应用程序.pyOCD 下载" />
+      <item itemvalue="CMake 应用程序.gd32e23x_spl" />
+      <item itemvalue="嵌入式 GDB 服务器.pyOCD调试" />
+    </list>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="d798be5d-7c2e-4c26-b551-5c1f4fd3a328" name="更改" comment="" />
+      <created>1783876271968</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1783876271968</updated>
+      <workItem from="1783876274430" duration="2377000" />
+      <workItem from="1783878953298" duration="637000" />
+      <workItem from="1783879825712" duration="638000" />
+      <workItem from="1783880569281" duration="410000" />
+      <workItem from="1783880994582" duration="1180000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+    <isAutomaticBootstrapAfterUpdate value="false" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
