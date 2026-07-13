@@ -12,181 +12,195 @@
 #include "freq.h"
 #include "main.h"
 
-volatile struct Oscilloscope oscilloscope={0};
+volatile struct Oscilloscope oscilloscope = {0};
 
 void Init_Oscilloscope(volatile struct Oscilloscope *value);
 
-int main(void)
-{      
-    uint16_t i=0;
-    
+static uint16_t median3(uint16_t a, uint16_t b, uint16_t c)
+{
+    uint16_t temp;
+
+    if (a > b) {
+        temp = a;
+        a = b;
+        b = temp;
+    }
+    if (b > c) {
+        temp = b;
+        b = c;
+        c = temp;
+    }
+    if (a > b) {
+        b = a;
+    }
+
+    return b;
+}
+
+int main(void) {
+    uint16_t i = 0;
+    uint16_t previousAdc = 0;
+    uint16_t currentAdc = 0;
+    uint16_t nextAdc = 0;
+
     //中间值
-    float median=0;
-    
-		//最小值
-		float min = 9999;
-	
+    float median = 0;
+
+    //最小值
+    float min = 9999;
+
     //显示值
-    float voltage=0;
-    
+    float voltage = 0;
+
     //触发电压值
-    float max_data=1.0f;
-    
+    float max_data = 1.0f;
+
     //波形放大倍数
-    float gainFactor=0;
-	
-		float adcValue = 0;
-    
-		//校准电压值，如果测量GND不为0的话需要校准
-		float calibration_vol = 0.12f;
-		
+    float gainFactor = 0;
+
+    float adcValue = 0;
+
+    //校准电压值，如果测量GND不为0的话需要校准
+    float calibration_vol = 0.06f;
+
     //触发沿标记
-    uint16_t Trigger_number=0;
-    
+    uint16_t Trigger_number = 0;
+
     //初始化示波器参数
     Init_Oscilloscope(&oscilloscope);
-    
+
     //时钟初始化
     systick_config();
-    
+
     //LED初始化
     Init_LED_GPIO();
-    
+
     //屏幕初始化
-		delay_1ms(1000);
+    delay_1ms(1000);
     TFT_Init();
-		
+
     //填充白色
-    TFT_Fill(0,0,160,128,BLACK);
-    
+    TFT_Fill(0, 0, 160, 128,BLACK);
+
     //初始化串口
     Init_USART(115200);
-    
+
     //ADC DMA初始化
     ADC_DMA_Init();
-    
+
     //初始化ADC引脚
     Init_ADC();
-    
+
     //初始化PWM输出
-    Init_PWM_Output(oscilloscope.timerPeriod-1,oscilloscope.pwmOut);
-    
+    Init_PWM_Output(oscilloscope.timerPeriod - 1, oscilloscope.pwmOut);
+
     //初始化波轮开关引脚
     Init_Wheel_Switch_GPIO();
-    
+
     //初始化按键引脚
     Init_Key_GPIO();
-    
+
     //初始化频率定时器2
     Init_FreqTimer();
-    
+
     //初始化静态UI
     TFT_StaticUI();
-    while(1)
-    {  
+    while (1) {
         //按键扫描处理函数
-				Key_Sacnf(&oscilloscope);
+        Key_Sacnf(&oscilloscope);
         Key_Handle(&oscilloscope);
-        
+
         //如果获取电压值完成，开始刷屏
-        if(oscilloscope.showbit==1)
-        {           
-            oscilloscope.showbit=0;
-            oscilloscope.vpp=0;
+        if (oscilloscope.showbit == 1) {
+            oscilloscope.showbit = 0;
+            oscilloscope.vpp = 0;
             min = 9999;
-            //转换电压值
-            for(i=0;i<300;i++)
-            {
-								adcValue = (Get_ADC_Value(i)*3.3f)/4096.0f;
-							
-								oscilloscope.voltageValue[i] = (5-(2.0f*adcValue));
-							
-                if((oscilloscope.vpp) < oscilloscope.voltageValue[i])
-                {
+            //对孤立 ADC 毛刺进行三点中值滤波，再转换为输入电压。
+            previousAdc = Get_ADC_Value(0);
+            currentAdc = Get_ADC_Value(1);
+            for (i = 1; i < 299; i++) {
+                nextAdc = Get_ADC_Value(i + 1);
+                adcValue = (median3(previousAdc, currentAdc, nextAdc) * 3.3f) / 4096.0f;
+
+                oscilloscope.voltageValue[i] = (22.f/17.f*15.3f/12.f*12.f/3.3f - 12.f/3.3f * adcValue);
+
+                previousAdc = currentAdc;
+                currentAdc = nextAdc;
+            }
+            oscilloscope.voltageValue[0] = oscilloscope.voltageValue[1];
+            oscilloscope.voltageValue[299] = oscilloscope.voltageValue[298];
+
+            //峰值和最小值也使用滤波后的数据，避免单点毛刺影响读数。
+            for (i = 0; i < 300; i++) {
+                if ((oscilloscope.vpp) < oscilloscope.voltageValue[i]) {
                     oscilloscope.vpp = oscilloscope.voltageValue[i];
                 }
-								if(min > oscilloscope.voltageValue[i])
-								{
-									min = oscilloscope.voltageValue[i];
-								}
-                if(oscilloscope.vpp <= 0.3)
-                {
-                    oscilloscope.gatherFreq=0;
+                if (min > oscilloscope.voltageValue[i]) {
+                    min = oscilloscope.voltageValue[i];
                 }
+            }
+            if (oscilloscope.vpp <= 0.3) {
+                oscilloscope.gatherFreq = 0;
             }
             oscilloscope.vpp = oscilloscope.vpp - calibration_vol;
             //刷屏的同时获取电压值
             dma_transfer_number_config(DMA_CH0, 300);
             dma_channel_enable(DMA_CH0);
-            
+
             //找到起始显示波形值
-            for(i=0;i<200;i++)
-            {
-                if(oscilloscope.voltageValue[i] < max_data)
-                {
-                    for(;i<200;i++)
-                    {
-                        if(oscilloscope.voltageValue[i] > max_data)
-                        {
-                            Trigger_number=i;
+            for (i = 0; i < 200; i++) {
+                if (oscilloscope.voltageValue[i] < max_data) {
+                    for (; i < 200; i++) {
+                        if (oscilloscope.voltageValue[i] > max_data) {
+                            Trigger_number = i;
                             break;
                         }
                     }
                     break;
                 }
             }
-            
+
             //如果幅值过小，会出现放大倍数过大导致波形显示异常的问题
-            if(oscilloscope.vpp > 0.3)
-            {
-								//获取中间值,如果有负压，则需要先抬升为正压
-								if(min < -0.3){
-									median = oscilloscope.vpp;
-								}
-								else{
-									median = oscilloscope.vpp / 2.0f;
-								}
-							
+            if (oscilloscope.vpp > 0.3) {
+                //获取中间值,如果有负压，则需要先抬升为正压
+                if (min < -0.3) {
+                    median = oscilloscope.vpp;
+                } else {
+                    median = oscilloscope.vpp / 2.0f;
+                }
+
                 //放大倍数，需要确定放大之后的区间，我将波形固定显示在（18.75~41.25中），(41.25-18.75)/2=11.25f
-                gainFactor = 11.25f/median;
-              
+                gainFactor = 11.25f / median;
             }
-            
+
             //依次显示后续100个数据，这样可以防止波形滚动
-            for(i=Trigger_number;i<Trigger_number+100;i++)
-            {
-								KEYD_SCAN(&oscilloscope);
-                if(oscilloscope.keyValue == KEYDPRESS)
-                {
-                    oscilloscope.keyValue=0;
-                    do
-                    {
-												KEYD_SCAN(&oscilloscope);
-                        if(oscilloscope.keyValue == KEYDPRESS){
-                            oscilloscope.keyValue=0;
+            for (i = Trigger_number; i < Trigger_number + 100; i++) {
+                KEYD_SCAN(&oscilloscope);
+                if (oscilloscope.keyValue == KEYDPRESS) {
+                    oscilloscope.keyValue = 0;
+                    do {
+                        KEYD_SCAN(&oscilloscope);
+                        if (oscilloscope.keyValue == KEYDPRESS) {
+                            oscilloscope.keyValue = 0;
                             break;
                         }
-                    }while(1);
+                    } while (1);
                 }
-								if(min < -0.3){
-									voltage = oscilloscope.voltageValue[i] + oscilloscope.vpp;
-								}
-								else{
-									voltage = oscilloscope.voltageValue[i];
-								}
-                if(voltage >= median)
-                {
-                    voltage = 30 + (voltage - median)*gainFactor;
+                if (min < -0.3) {
+                    voltage = oscilloscope.voltageValue[i] + oscilloscope.vpp;
+                } else {
+                    voltage = oscilloscope.voltageValue[i];
                 }
-                else
-                {
-                    voltage = 30 - (median - voltage)*gainFactor;
+                if (voltage >= median) {
+                    voltage = 30 + (voltage - median) * gainFactor;
+                } else {
+                    voltage = 30 - (median - voltage) * gainFactor;
                 }
-                drawCurve(80,voltage);
-            }          
-        }        
+                drawCurve(80, voltage);
+            }
+        }
         //参数显示UI
-        TFT_ShowUI(&oscilloscope); 
+        TFT_ShowUI(&oscilloscope);
     }
 }
 
@@ -195,17 +209,14 @@ int main(void)
 *   函数参数：volatile struct Oscilloscope *value--示波器参数结构体指针
 *   返回值：无
 */
-void Init_Oscilloscope(volatile struct Oscilloscope *value)
-{
-    (*value).showbit    =0;                         //清除显示标志位
-    (*value).sampletime =ADC_SAMPLETIME_239POINT5;  //adc采样周期
-    (*value).keyValue   =0;                         //清楚按键值
-    (*value).ouptputbit =0;                         //输出标志位
-    (*value).gatherFreq =0;                         //采集频率
-    (*value).outputFreq =1000;                      //输出频率
-    (*value).pwmOut     =500;                       //PWM引脚输出的PWM占空比
-    (*value).timerPeriod=1000;                      //PWM输出定时器周期
-    (*value).vpp        =0.0f;                      //峰峰值
+void Init_Oscilloscope(volatile struct Oscilloscope *value) {
+    (*value).showbit = 0; //清除显示标志位
+    (*value).sampletime = ADC_SAMPLETIME_239POINT5; //adc采样周期
+    (*value).keyValue = 0; //清楚按键值
+    (*value).ouptputbit = 0; //输出标志位
+    (*value).gatherFreq = 0; //采集频率
+    (*value).outputFreq = 1000; //输出频率
+    (*value).pwmOut = 500; //PWM引脚输出的PWM占空比
+    (*value).timerPeriod = 1000; //PWM输出定时器周期
+    (*value).vpp = 0.0f; //峰峰值
 }
-
-
