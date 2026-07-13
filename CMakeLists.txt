@@ -10,7 +10,7 @@ if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "Debug")
 endif()
 
-set(CMAKE_PROJECT_NAME GD32E230_SPL_Template)
+set(CMAKE_PROJECT_NAME GD32E230_Oscilloscope)
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 
 # CLion's regular CMake profile does not apply CMakePresets.json automatically.
@@ -35,4 +35,11 @@ add_custom_command(
     COMMAND ${CMAKE_OBJCOPY} -O binary $<TARGET_FILE:${CMAKE_PROJECT_NAME}>
             $<TARGET_FILE_DIR:${CMAKE_PROJECT_NAME}>/$<TARGET_FILE_BASE_NAME:${CMAKE_PROJECT_NAME}>.bin
     COMMENT "Generating HEX and BIN images"
+)
+
+add_custom_command(
+    TARGET ${CMAKE_PROJECT_NAME}
+    POST_BUILD
+    COMMAND ${CMAKE_SIZE} $<TARGET_FILE:${CMAKE_PROJECT_NAME}>
+    COMMENT "Firmware size"
 )

@@ -7,8 +7,9 @@ MEMORY
 ENTRY(Reset_Handler)
 
 _estack = ORIGIN(RAM) + LENGTH(RAM);
-_Min_Heap_Size = 0x400;
-_Min_Stack_Size = 0x800;
+/* Match the original Keil project reservations: 512 B heap and 1 KiB stack. */
+_Min_Heap_Size = 0x200;
+_Min_Stack_Size = 0x400;
 
 SECTIONS
 {
