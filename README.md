@@ -2,7 +2,9 @@
 
 基于 GD32E230C8T6 的简易数字示波器固件。项目从原始 Keil 工程迁移到 CMake + ARM GNU Toolchain，并保留 GD32 SPL 作为外部依赖，方便在 CLion 或命令行下构建、烧录和调试。
 
-> `main` 保持原始最终案例的输入方式；波轮开关、PWM 关闭拉低和 ADC 单点毛刺滤波位于 `codex/wheel-switch-input` 分支。
+项目链接：[立创开源硬件平台](https://oshwhub.com/golden_nianhua/simple-digital-oscilloscope) | [GitHub](https://github.com/Golden-nianhua/GD32E230-Simple-Digital-Oscilloscope)
+
+> `main` 保持原始最终案例的输入方式；波轮开关、PWM 关闭拉低和 ADC 单点毛刺滤波位于 `Oscilloscope-nianhua` 分支。
 
 ## 功能
 
@@ -10,7 +12,7 @@
 - ST7735S 160 x 128 SPI TFT 波形显示
 - 输入电压、采样频率、PWM 输出状态的屏幕显示
 - PA2 / TIMER14_CH0 PWM 输出
-- PA1 / TIMER2_CH1 频率测量输入
+- PA6 / TIMER2_CH0 频率测量输入
 - 基于 GD32 SPL 的 CMake / GCC 构建，生成 ELF、HEX、BIN 和 MAP
 - Release 使用 `-Os`、LTO、段垃圾回收和 newlib-nano，适配 64 KiB Flash
 
@@ -19,7 +21,7 @@
 | 分支 | 用途 |
 | --- | --- |
 | `main` | 原始最终案例迁移后的 GCC 版本，保留 EC11 编码器和原始按键流程。 |
-| `codex/wheel-switch-input` | 实际硬件适配版：PB3 左、PB9 右、PB4 按下，均为内部上拉且按下接地；包含横屏地址偏移、PWM 关闭时 PA2 拉低、ADC 三点中值滤波和电压换算校准。 |
+| `Oscilloscope-nianhua` | 实际硬件适配版：PB3 左、PB9 右、PB4 按下，均为内部上拉且按下接地；包含横屏地址偏移、PWM 关闭时 PA2 拉低、ADC 三点中值滤波和电压换算校准。 |
 
 ## 硬件连接
 
@@ -27,7 +29,7 @@
 | --- | --- | --- |
 | ADC 输入 | PA3 | 模拟输入，必须保持在 MCU 允许的模拟输入范围内。 |
 | PWM 输出 | PA2 | TIMER14_CH0。功能分支关闭 PWM 后会主动拉低该引脚。 |
-| 频率测量 | PA1 | TIMER2_CH1。 |
+| 频率测量 | PA6 | TIMER2_CH0。 |
 | TFT SCK | PA5 | SPI0 时钟。 |
 | TFT MOSI | PA7 | SPI0 数据。 |
 | TFT RESET / DC / CS / BL | PB5 / PB6 / PB7 / PB8 | ST7735S 控制信号与背光。 |
