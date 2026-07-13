@@ -105,12 +105,12 @@ void Key_Handle(volatile struct Oscilloscope *value)
             if((*value).ouptputbit == 0)
             {
                 (*value).ouptputbit=1;
-                timer_enable(TIMER14);
+                Enable_Output_PWM();
             }
             else
             {
                 (*value).ouptputbit=0;
-               timer_disable(TIMER14); 
+                Disable_Output_PWM();
             }
             break;
         case KEYAPRESS:

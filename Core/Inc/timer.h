@@ -10,5 +10,7 @@
 void Init_PWM_Output(uint32_t period,uint32_t pulse);
 void Set_Output_PWMComparex(uint16_t value);
 void Set_Output_Freq(uint32_t value);
+void Enable_Output_PWM(void);
+void Disable_Output_PWM(void);
 
 #endif

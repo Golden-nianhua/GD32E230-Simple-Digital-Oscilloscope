@@ -71,8 +71,26 @@ void Init_PWM_Output(uint32_t period,uint32_t pulse)
 	//配置定时器为主要输出函数，所有通道使能
 	timer_primary_output_config(TIMER14, ENABLE);
 	
-	//失能定时器
-	timer_disable(TIMER14);	
+	//关闭时将 PA2 作为普通 GPIO 拉低。
+	Disable_Output_PWM();
+}
+
+void Enable_Output_PWM(void)
+{
+	//恢复 PA2 的 TIMER14_CH0 复用输出。
+	gpio_mode_set(GPIOA, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_2);
+	gpio_af_set(GPIOA, GPIO_AF_0, GPIO_PIN_2);
+	timer_counter_value_config(TIMER14, 0);
+	timer_enable(TIMER14);
+}
+
+void Disable_Output_PWM(void)
+{
+	//停止计数后，脱离复用输出并显式保持低电平。
+	timer_disable(TIMER14);
+	gpio_mode_set(GPIOA, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO_PIN_2);
+	gpio_output_options_set(GPIOA, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_2);
+	gpio_bit_reset(GPIOA, GPIO_PIN_2);
 }
 
 /*
