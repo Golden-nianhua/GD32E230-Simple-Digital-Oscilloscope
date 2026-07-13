@@ -1,9 +1,10 @@
 # GD32E230 Simple Digital Oscilloscope
 
 GD32E230C8T6 simple digital oscilloscope firmware, built with CMake and ARM
-GNU Toolchain. The original Keil project is retained in `Oscilloscope/` as the
-source of the board configuration and application code; the GCC build compiles
-the same application directly.
+GNU Toolchain. The application has been migrated into the template's `Core/`
+layout and builds directly from that source tree. It uses the template's
+externally configured GD32 firmware library rather than copying it into this
+repository.
 
 ## Target
 
@@ -21,7 +22,9 @@ readouts.
 
 Install an ARM GNU Toolchain that provides `arm-none-eabi-gcc`, CMake, and
 Ninja. Put the toolchain `bin` directory on `PATH`, or set
-`ARM_GNU_TOOLCHAIN_ROOT` to the toolchain installation directory.
+`ARM_GNU_TOOLCHAIN_ROOT` to the toolchain installation directory. Set
+`GD32_FIRMWARE_ROOT` to the installed GD32E23x firmware library when its path
+differs from the template configuration.
 
 ```powershell
 cmake --preset Release
@@ -59,9 +62,8 @@ Hardware download/debug has not been tested as part of the GCC migration.
 
 ## Layout
 
-- `Oscilloscope/User`: main program, interrupts, and delay functions
-- `Oscilloscope/Hardware`: ADC, frequency measurement, keys, TFT, PWM, and USART
-- `Oscilloscope/Firmware`: GD32 SPL, device CMSIS files, and ARM CMSIS Core headers
+- `Core/Src`, `Core/Inc`: application, peripheral drivers, interrupts, and headers
+- External GD32 firmware library: GD32 SPL and CMSIS headers, via `GD32_FIRMWARE_ROOT`
 - `cmake`: ARM GCC toolchain and explicit source list
 - `Misc`: GD32 device pack, SVD, and pyOCD configuration
 

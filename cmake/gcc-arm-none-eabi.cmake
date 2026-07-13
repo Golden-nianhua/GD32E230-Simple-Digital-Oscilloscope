@@ -2,6 +2,12 @@ set(CMAKE_SYSTEM_NAME               Generic)
 set(CMAKE_SYSTEM_PROCESSOR          arm)
 
 set(ARM_GNU_TOOLCHAIN_ROOT "" CACHE PATH "ARM GNU Toolchain installation directory (optional when arm-none-eabi-gcc is on PATH)")
+set(GD32_FIRMWARE_ROOT "D:/Code/MCU/GD32/GD32E23x_Firmware_Library_V2.5.0"
+    CACHE PATH "GD32E23x firmware library directory")
+
+if(NOT EXISTS "${GD32_FIRMWARE_ROOT}")
+    message(FATAL_ERROR "GD32_FIRMWARE_ROOT does not exist: ${GD32_FIRMWARE_ROOT}")
+endif()
 
 if(ARM_GNU_TOOLCHAIN_ROOT)
     set(ARM_GCC_EXECUTABLE "${ARM_GNU_TOOLCHAIN_ROOT}/bin/arm-none-eabi-gcc.exe")
